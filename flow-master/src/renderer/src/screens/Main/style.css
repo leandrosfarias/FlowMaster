@@ -1,0 +1,32 @@
+.main-layout {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    /* Sidebar 250px e FlowArea ocupa o restante */
+    grid-template-rows: 10% 1fr;
+    /* Topbar 60px e o restante para a área de fluxo */
+    grid-template-areas:
+        "topbar topbar"
+        "sidebar flowarea";
+    height: 100vh;
+    /* Altura total da viewport */
+    overflow: hidden;
+    /* Esconde scroll desnecessário */
+}
+
+.topbar {
+    grid-area: topbar;
+    /* Ocupa a área 'topbar' */
+    background-color: #6200ee;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    /* Ocupa a área 'sidebar' */
+    background-color: #f0f0f0;
+}
+
+.flowarea {
+    grid-area: flowarea;
+    /* Ocupa a área 'flowarea' */
+    background-color: #ffffff;
+}
